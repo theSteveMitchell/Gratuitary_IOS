@@ -21,8 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Tip Calculator";
-    [self updateValues];
+    [self updateTipOptions];
+    [self updateTipValues];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [self updateTipOptions];
+    [self updateTipValues];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,21 +37,24 @@
     [self.view endEditing:YES];
 }
 - (IBAction)onTipPercentChanged:(UISegmentedControl *)sender {
-    [self updateValues];
+    [self updateTipValues];
 }
 - (IBAction)onBillValueChanged:(UITextField *)sender {
-    [self updateValues];
+    [self updateTipValues];
 }
 - (IBAction)onRoundChanged:(UISwitch *)sender {
-    [self updateValues];
+    [self updateTipValues];
 }
-- (void)updateValues {
+- (void)updateTipValues {
     //get the bill amount
     float billAmount = [self.billTextField.text floatValue];
     
     // compute the tip and total
-    float tipPercentage = (.15 + (self.tipControl.selectedSegmentIndex * .05));
-    float tipAmount = billAmount * tipPercentage;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    long greatTipValue = [defaults integerForKey:@"greatTipValue"];
+    NSArray *tipPercentages = @[@(greatTipValue), @(15), @(10)];
+    
+    float tipAmount = billAmount * ([tipPercentages[self.tipControl.selectedSegmentIndex] floatValue]/100);
     if (self.roundControl.on) {
         tipAmount = ceil(tipAmount);
     }
@@ -56,6 +63,16 @@
     //updat the label
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
+}
+
+- (void)updateTipOptions {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    long greatTipValue = [defaults integerForKey:@"greatTipValue"];
+    
+    
+    [self.tipControl setTitle:[NSString stringWithFormat:@"%li%@", greatTipValue, @"%"] forSegmentAtIndex:0];
+    [self.tipControl setTitle:@"30%" forSegmentAtIndex:1];
+    [self.tipControl setTitle:@"30%" forSegmentAtIndex:2];
 }
 
 @end

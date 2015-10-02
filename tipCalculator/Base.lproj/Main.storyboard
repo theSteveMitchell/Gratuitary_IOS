@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Tip View Controller-->
+        <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TipViewController" sceneMemberID="viewController">
@@ -88,7 +88,13 @@
                             <outletCollection property="gestureRecognizers" destination="POS-bF-4a8" appends="YES" id="9c3-b9-qVA"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="X9D-je-otF"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="X9D-je-otF">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="BFu-9H-Ppz" userLabel="Settings">
+                            <connections>
+                                <segue destination="xm0-4f-qb1" kind="push" id="uGy-JA-AqA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billTextField" destination="QmD-9C-fWO" id="k9k-2S-8Q0"/>
                         <outlet property="roundControl" destination="HxR-Ar-laB" id="VHa-MT-Z7F"/>
@@ -105,6 +111,85 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="794" y="392"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="yFU-Ph-vh6">
+            <objects>
+                <viewController id="xm0-4f-qb1" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zhG-UK-Ab6"/>
+                        <viewControllerLayoutGuide type="bottom" id="pd9-do-li9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6bJ-iF-Goo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Great Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py9-fe-lnC">
+                                <rect key="frame" x="16" y="72" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHy-70-Uqo">
+                                <rect key="frame" x="232" y="72" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll3-nc-C6d">
+                                <rect key="frame" x="16" y="139" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="10" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-RK-NWK">
+                                <rect key="frame" x="14" y="169" width="292" height="31"/>
+                                <connections>
+                                    <action selector="onGreatTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="MNX-QZ-iwi"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsH-qg-ivD">
+                                <rect key="frame" x="232" y="139" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Poor Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlV-PB-n2K">
+                                <rect key="frame" x="16" y="207" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="5" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-hW-vIO">
+                                <rect key="frame" x="14" y="238" width="292" height="31"/>
+                                <connections>
+                                    <action selector="onGreatTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="YAr-Bw-Vpx"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-BS-MAJ">
+                                <rect key="frame" x="232" y="207" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="15" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="ilj-Ar-Y5t">
+                                <rect key="frame" x="14" y="101" width="292" height="31"/>
+                                <connections>
+                                    <action selector="onGreatTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="b8L-C5-2uJ"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Bpv-I2-t3z"/>
+                    <connections>
+                        <outlet property="greatTipControl" destination="ilj-Ar-Y5t" id="HxZ-ta-O33"/>
+                        <outlet property="greatTipValue" destination="kHy-70-Uqo" id="P35-CU-5gz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bx0-mc-Ay3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211" y="392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BHf-jF-nDt">

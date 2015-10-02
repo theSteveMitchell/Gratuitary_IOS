@@ -14,6 +14,7 @@
 		AA0CF4131BBEE08D0045CB18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0CF4121BBEE08D0045CB18 /* Images.xcassets */; };
 		AA0CF4161BBEE08D0045CB18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0CF4141BBEE08D0045CB18 /* LaunchScreen.xib */; };
 		AA0CF4221BBEE08D0045CB18 /* tipCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CF4211BBEE08D0045CB18 /* tipCalculatorTests.m */; };
+		AA0CF42D1BBF05E20045CB18 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CF42C1BBF05E20045CB18 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		AA0CF41B1BBEE08D0045CB18 /* tipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0CF4201BBEE08D0045CB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA0CF4211BBEE08D0045CB18 /* tipCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tipCalculatorTests.m; sourceTree = "<group>"; };
+		AA0CF42B1BBF05E20045CB18 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AA0CF42C1BBF05E20045CB18 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		AA0CF4041BBEE08D0045CB18 /* tipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				AA0CF42B1BBF05E20045CB18 /* SettingsViewController.h */,
+				AA0CF42C1BBF05E20045CB18 /* SettingsViewController.m */,
 				AA0CF4091BBEE08D0045CB18 /* AppDelegate.h */,
 				AA0CF40A1BBEE08D0045CB18 /* AppDelegate.m */,
 				AA0CF40C1BBEE08D0045CB18 /* TipViewController.h */,
@@ -222,6 +227,7 @@
 				AA0CF40E1BBEE08D0045CB18 /* TipViewController.m in Sources */,
 				AA0CF40B1BBEE08D0045CB18 /* AppDelegate.m in Sources */,
 				AA0CF4081BBEE08D0045CB18 /* main.m in Sources */,
+				AA0CF42D1BBF05E20045CB18 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +424,7 @@
 				AA0CF4271BBEE08D0045CB18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA0CF4281BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "tipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				AA0CF42A1BBEE08D0045CB18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
