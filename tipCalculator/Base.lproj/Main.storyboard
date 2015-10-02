@@ -70,18 +70,6 @@
                                 <rect key="frame" x="16" y="169" width="288" height="7"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-Ar-laB">
-                                <rect key="frame" x="204" y="329" width="51" height="31"/>
-                                <connections>
-                                    <action selector="onRoundChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kes-7P-E2P"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-3i-l6h">
-                                <rect key="frame" x="67" y="334" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -98,7 +86,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billTextField" destination="QmD-9C-fWO" id="k9k-2S-8Q0"/>
-                        <outlet property="roundControl" destination="HxR-Ar-laB" id="VHa-MT-Z7F"/>
                         <outlet property="tipControl" destination="jEf-QH-Jbz" id="O5I-Si-CeC"/>
                         <outlet property="tipLabel" destination="Hfx-KF-7Oi" id="BcP-kM-Vxd"/>
                         <outlet property="totalLabel" destination="p3G-T8-mwR" id="tRO-kJ-4dW"/>
@@ -181,6 +168,19 @@
                                     <action selector="onGreatTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="b8L-C5-2uJ"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-3i-l6h">
+                                <rect key="frame" x="16" y="281" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-Ar-laB">
+                                <rect key="frame" x="255" y="276" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onRoundChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kes-7P-E2P"/>
+                                    <action selector="onRoundValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="dYK-6f-muF"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -192,6 +192,7 @@
                         <outlet property="greatTipValue" destination="kHy-70-Uqo" id="P35-CU-5gz"/>
                         <outlet property="poorTipControl" destination="FFW-hW-vIO" id="HDF-Bu-BPr"/>
                         <outlet property="poorTipValue" destination="YDP-BS-MAJ" id="xwD-Nq-ZWr"/>
+                        <outlet property="roundControl" destination="HxR-Ar-laB" id="bVI-nu-3X4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bx0-mc-Ay3" userLabel="First Responder" sceneMemberID="firstResponder"/>

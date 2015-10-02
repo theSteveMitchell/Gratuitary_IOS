@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
-@property (weak, nonatomic) IBOutlet UISwitch *roundControl;
 
 @end
 
@@ -42,9 +41,6 @@
 - (IBAction)onBillValueChanged:(UITextField *)sender {
     [self updateTipValues];
 }
-- (IBAction)onRoundChanged:(UISwitch *)sender {
-    [self updateTipValues];
-}
 - (void)updateTipValues {
     //get the bill amount
     float billAmount = [self.billTextField.text floatValue];
@@ -54,11 +50,13 @@
     long greatTipValue = [defaults integerForKey:@"greatTipValue"];
     long averageTipValue = [defaults integerForKey:@"averageTipValue"];
     long poorTipValue = [defaults integerForKey:@"poorTipValue"];
+    BOOL roundUp = [defaults boolForKey:@"roundUp"];
     
     NSArray *tipPercentages = @[@(greatTipValue), @(averageTipValue), @(poorTipValue)];
     
     float tipAmount = billAmount * ([tipPercentages[self.tipControl.selectedSegmentIndex] floatValue]/100);
-    if (self.roundControl.on) {
+    NSLog(roundUp ? @"Yes" : @"No");
+    if (roundUp) {
         //to correct for float precision errors, numbers within 1 penny of the floor with round down.
         tipAmount = floor(tipAmount + 0.994);
     }

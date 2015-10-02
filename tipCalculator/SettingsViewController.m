@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *averageTipControl;
 @property (weak, nonatomic) IBOutlet UILabel *poorTipValue;
 @property (weak, nonatomic) IBOutlet UISlider *poorTipControl;
+@property (weak, nonatomic) IBOutlet UISwitch *roundControl;
 
 @end
 
@@ -50,7 +51,6 @@
     
     [self.poorTipControl setValue:poorTipValue animated:(NO)];
     self.poorTipValue.text = [NSString stringWithFormat:@"%li%@", poorTipValue, @"%"];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,6 +80,13 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:poorTipValue forKey:@"poorTipValue"];
 }
+
+- (IBAction)onRoundValueChanged:(UISwitch *)sender {
+    NSLog( self.roundControl.on ? @"Yes" : @"No");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:(self.roundControl.on) forKey:@"roundUp"];
+}
+
 
 /*
 #pragma mark - Navigation
