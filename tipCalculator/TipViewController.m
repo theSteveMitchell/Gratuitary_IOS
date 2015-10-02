@@ -24,6 +24,7 @@
     [self updateTipValues];
 }
 - (void)viewWillAppear:(BOOL)animated {
+    [self.billTextField becomeFirstResponder];
     [self updateTipOptions];
     [self updateTipValues];
 }
