@@ -38,6 +38,9 @@
 - (IBAction)onBillValueChanged:(UITextField *)sender {
     [self updateValues];
 }
+- (IBAction)onRoundChanged:(UISwitch *)sender {
+    [self updateValues];
+}
 - (void)updateValues {
     //get the bill amount
     float billAmount = [self.billTextField.text floatValue];
