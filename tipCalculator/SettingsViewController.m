@@ -35,12 +35,12 @@
     
     long averageTipValue = 15;
     if ([defaults integerForKey:@"averageTipValue"]) {
-        greatTipValue = [defaults integerForKey:@"averageTipValue"];
+        averageTipValue = [defaults integerForKey:@"averageTipValue"];
     }
     
     long poorTipValue = 10;
     if ([defaults integerForKey:@"poorTipValue"]) {
-        greatTipValue = [defaults integerForKey:@"poorTipValue"];
+        poorTipValue = [defaults integerForKey:@"poorTipValue"];
     }
     //NSLog([NSString stringWithFormat:@"%li %@", greatTipValue, @"%"]);
     [self.greatTipControl setValue:greatTipValue animated:(NO)];
@@ -51,6 +51,9 @@
     
     [self.poorTipControl setValue:poorTipValue animated:(NO)];
     self.poorTipValue.text = [NSString stringWithFormat:@"%li%@", poorTipValue, @"%"];
+    
+    BOOL roundUp = [defaults boolForKey:@"roundUp"];
+    [self.roundControl setOn:roundUp animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,7 +85,6 @@
 }
 
 - (IBAction)onRoundValueChanged:(UISwitch *)sender {
-    NSLog( self.roundControl.on ? @"Yes" : @"No");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:(self.roundControl.on) forKey:@"roundUp"];
 }
