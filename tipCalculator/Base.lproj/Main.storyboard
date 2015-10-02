@@ -145,6 +145,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="10" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-RK-NWK">
                                 <rect key="frame" x="14" y="169" width="292" height="31"/>
                                 <connections>
+                                    <action selector="onAverageTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="aOa-s9-SHy"/>
                                     <action selector="onGreatTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="MNX-QZ-iwi"/>
                                 </connections>
                             </slider>
@@ -164,6 +165,7 @@
                                 <rect key="frame" x="14" y="238" width="292" height="31"/>
                                 <connections>
                                     <action selector="onGreatTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="YAr-Bw-Vpx"/>
+                                    <action selector="onPoorTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="BSk-Yo-hGo"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-BS-MAJ">
@@ -183,8 +185,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Bpv-I2-t3z"/>
                     <connections>
+                        <outlet property="averageTipControl" destination="CiC-RK-NWK" id="7LC-2S-4Oo"/>
+                        <outlet property="averageTipValue" destination="dsH-qg-ivD" id="pHb-zs-tjJ"/>
                         <outlet property="greatTipControl" destination="ilj-Ar-Y5t" id="HxZ-ta-O33"/>
                         <outlet property="greatTipValue" destination="kHy-70-Uqo" id="P35-CU-5gz"/>
+                        <outlet property="poorTipControl" destination="FFW-hW-vIO" id="HDF-Bu-BPr"/>
+                        <outlet property="poorTipValue" destination="YDP-BS-MAJ" id="xwD-Nq-ZWr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bx0-mc-Ay3" userLabel="First Responder" sceneMemberID="firstResponder"/>

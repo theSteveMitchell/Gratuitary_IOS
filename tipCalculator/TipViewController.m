@@ -52,7 +52,10 @@
     // compute the tip and total
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     long greatTipValue = [defaults integerForKey:@"greatTipValue"];
-    NSArray *tipPercentages = @[@(greatTipValue), @(15), @(10)];
+    long averageTipValue = [defaults integerForKey:@"averageTipValue"];
+    long poorTipValue = [defaults integerForKey:@"poorTipValue"];
+    
+    NSArray *tipPercentages = @[@(greatTipValue), @(averageTipValue), @(poorTipValue)];
     
     float tipAmount = billAmount * ([tipPercentages[self.tipControl.selectedSegmentIndex] floatValue]/100);
     if (self.roundControl.on) {
@@ -68,11 +71,12 @@
 - (void)updateTipOptions {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     long greatTipValue = [defaults integerForKey:@"greatTipValue"];
-    
+    long averageTipValue = [defaults integerForKey:@"averageTipValue"];
+    long poorTipValue = [defaults integerForKey:@"poorTipValue"];
     
     [self.tipControl setTitle:[NSString stringWithFormat:@"%li%@", greatTipValue, @"%"] forSegmentAtIndex:0];
-    [self.tipControl setTitle:@"30%" forSegmentAtIndex:1];
-    [self.tipControl setTitle:@"30%" forSegmentAtIndex:2];
+    [self.tipControl setTitle:[NSString stringWithFormat:@"%li%@", averageTipValue, @"%"] forSegmentAtIndex:1];
+    [self.tipControl setTitle:[NSString stringWithFormat:@"%li%@", poorTipValue, @"%"]forSegmentAtIndex:2];
 }
 
 @end
