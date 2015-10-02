@@ -59,7 +59,8 @@
     
     float tipAmount = billAmount * ([tipPercentages[self.tipControl.selectedSegmentIndex] floatValue]/100);
     if (self.roundControl.on) {
-        tipAmount = ceil(tipAmount);
+        //to correct for float precision errors, numbers within 1 penny of the floor with round down.
+        tipAmount = floor(tipAmount + 0.99);
     }
     float totalAmount = billAmount + tipAmount;
     
