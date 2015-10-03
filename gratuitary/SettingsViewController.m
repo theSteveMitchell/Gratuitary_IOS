@@ -32,16 +32,26 @@
     if ([defaults integerForKey:@"greatTipValue"]) {
         greatTipValue = [defaults integerForKey:@"greatTipValue"];
     }
+    else {
+        [defaults setInteger:greatTipValue forKey:@"greatTipValue"];
+    }
     
     long averageTipValue = 15;
     if ([defaults integerForKey:@"averageTipValue"]) {
         averageTipValue = [defaults integerForKey:@"averageTipValue"];
+    }
+    else {
+        [defaults setInteger:averageTipValue forKey:@"averageTipValue"];
     }
     
     long poorTipValue = 10;
     if ([defaults integerForKey:@"poorTipValue"]) {
         poorTipValue = [defaults integerForKey:@"poorTipValue"];
     }
+    else {
+        [defaults setInteger:poorTipValue forKey:@"poorTipValue"];
+    }
+    
     //NSLog([NSString stringWithFormat:@"%li %@", greatTipValue, @"%"]);
     [self.greatTipControl setValue:greatTipValue animated:(NO)];
     self.greatTipValue.text = [NSString stringWithFormat:@"%li%@", greatTipValue, @"%"];

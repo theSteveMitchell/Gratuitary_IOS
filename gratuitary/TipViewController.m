@@ -69,9 +69,9 @@
 
 - (void)updateTipOptions {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    long greatTipValue = [defaults integerForKey:@"greatTipValue"];
-    long averageTipValue = [defaults integerForKey:@"averageTipValue"];
-    long poorTipValue = [defaults integerForKey:@"poorTipValue"];
+    long greatTipValue = [defaults integerForKey:@"greatTipValue"] ? [defaults integerForKey:@"greatTipValue"] : 20;
+    long averageTipValue = [defaults integerForKey:@"averageTipValue"] ? [defaults integerForKey:@"averageTipValue"] : 15;
+    long poorTipValue = [defaults integerForKey:@"poorTipValue"] ? [defaults integerForKey:@"poorTipValue"] : 10;
     
     [self.tipControl setTitle:[NSString stringWithFormat:@"%li%@", greatTipValue, @"%"] forSegmentAtIndex:0];
     [self.tipControl setTitle:[NSString stringWithFormat:@"%li%@", averageTipValue, @"%"] forSegmentAtIndex:1];
