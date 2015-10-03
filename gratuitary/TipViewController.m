@@ -33,9 +33,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)onTap:(UITapGestureRecognizer *)sender {
-    [self.view endEditing:YES];
-}
 - (IBAction)onTipPercentChanged:(UISegmentedControl *)sender {
     [self updateTipValues];
 }
