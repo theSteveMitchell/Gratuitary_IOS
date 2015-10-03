@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA0CF4011BBEE08D0045CB18"
-               BuildableName = "tipCalculator.app"
-               BlueprintName = "tipCalculator"
-               ReferencedContainer = "container:tipCalculator.xcodeproj">
+               BuildableName = "gratuitary.app"
+               BlueprintName = "gratuitary"
+               ReferencedContainer = "container:gratuitary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA0CF41A1BBEE08D0045CB18"
-               BuildableName = "tipCalculatorTests.xctest"
-               BlueprintName = "tipCalculatorTests"
-               ReferencedContainer = "container:tipCalculator.xcodeproj">
+               BuildableName = "gratuitaryTests.xctest"
+               BlueprintName = "gratuitaryTests"
+               ReferencedContainer = "container:gratuitary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA0CF41A1BBEE08D0045CB18"
-               BuildableName = "tipCalculatorTests.xctest"
-               BlueprintName = "tipCalculatorTests"
-               ReferencedContainer = "container:tipCalculator.xcodeproj">
+               BuildableName = "gratuitaryTests.xctest"
+               BlueprintName = "gratuitaryTests"
+               ReferencedContainer = "container:gratuitary.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0CF4011BBEE08D0045CB18"
-            BuildableName = "tipCalculator.app"
-            BlueprintName = "tipCalculator"
-            ReferencedContainer = "container:tipCalculator.xcodeproj">
+            BuildableName = "gratuitary.app"
+            BlueprintName = "gratuitary"
+            ReferencedContainer = "container:gratuitary.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0CF4011BBEE08D0045CB18"
-            BuildableName = "tipCalculator.app"
-            BlueprintName = "tipCalculator"
-            ReferencedContainer = "container:tipCalculator.xcodeproj">
+            BuildableName = "gratuitary.app"
+            BlueprintName = "gratuitary"
+            ReferencedContainer = "container:gratuitary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0CF4011BBEE08D0045CB18"
-            BuildableName = "tipCalculator.app"
-            BlueprintName = "tipCalculator"
-            ReferencedContainer = "container:tipCalculator.xcodeproj">
+            BuildableName = "gratuitary.app"
+            BlueprintName = "gratuitary"
+            ReferencedContainer = "container:gratuitary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

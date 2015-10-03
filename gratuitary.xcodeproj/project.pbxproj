@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA0CF4021BBEE08D0045CB18 /* tipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0CF4021BBEE08D0045CB18 /* gratuitary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gratuitary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0CF4061BBEE08D0045CB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA0CF4071BBEE08D0045CB18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA0CF4091BBEE08D0045CB18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		AA0CF4101BBEE08D0045CB18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA0CF4121BBEE08D0045CB18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA0CF4151BBEE08D0045CB18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		AA0CF41B1BBEE08D0045CB18 /* tipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0CF41B1BBEE08D0045CB18 /* gratuitaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gratuitaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0CF4201BBEE08D0045CB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA0CF4211BBEE08D0045CB18 /* tipCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tipCalculatorTests.m; sourceTree = "<group>"; };
 		AA0CF42B1BBF05E20045CB18 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		AA0CF4031BBEE08D0045CB18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA0CF4021BBEE08D0045CB18 /* tipCalculator.app */,
-				AA0CF41B1BBEE08D0045CB18 /* tipCalculatorTests.xctest */,
+				AA0CF4021BBEE08D0045CB18 /* gratuitary.app */,
+				AA0CF41B1BBEE08D0045CB18 /* gratuitaryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA0CF4011BBEE08D0045CB18 /* tipCalculator */ = {
+		AA0CF4011BBEE08D0045CB18 /* gratuitary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA0CF4251BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "tipCalculator" */;
+			buildConfigurationList = AA0CF4251BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "gratuitary" */;
 			buildPhases = (
 				AA0CF3FE1BBEE08D0045CB18 /* Sources */,
 				AA0CF3FF1BBEE08D0045CB18 /* Frameworks */,
@@ -139,14 +139,14 @@
 			);
 			dependencies = (
 			);
-			name = tipCalculator;
+			name = gratuitary;
 			productName = tipCalculator;
-			productReference = AA0CF4021BBEE08D0045CB18 /* tipCalculator.app */;
+			productReference = AA0CF4021BBEE08D0045CB18 /* gratuitary.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AA0CF41A1BBEE08D0045CB18 /* tipCalculatorTests */ = {
+		AA0CF41A1BBEE08D0045CB18 /* gratuitaryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA0CF4281BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "tipCalculatorTests" */;
+			buildConfigurationList = AA0CF4281BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "gratuitaryTests" */;
 			buildPhases = (
 				AA0CF4171BBEE08D0045CB18 /* Sources */,
 				AA0CF4181BBEE08D0045CB18 /* Frameworks */,
@@ -157,9 +157,9 @@
 			dependencies = (
 				AA0CF41D1BBEE08D0045CB18 /* PBXTargetDependency */,
 			);
-			name = tipCalculatorTests;
+			name = gratuitaryTests;
 			productName = tipCalculatorTests;
-			productReference = AA0CF41B1BBEE08D0045CB18 /* tipCalculatorTests.xctest */;
+			productReference = AA0CF41B1BBEE08D0045CB18 /* gratuitaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA0CF3FD1BBEE08D0045CB18 /* Build configuration list for PBXProject "tipCalculator" */;
+			buildConfigurationList = AA0CF3FD1BBEE08D0045CB18 /* Build configuration list for PBXProject "gratuitary" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA0CF4011BBEE08D0045CB18 /* tipCalculator */,
-				AA0CF41A1BBEE08D0045CB18 /* tipCalculatorTests */,
+				AA0CF4011BBEE08D0045CB18 /* gratuitary */,
+				AA0CF41A1BBEE08D0045CB18 /* gratuitaryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,7 +244,7 @@
 /* Begin PBXTargetDependency section */
 		AA0CF41D1BBEE08D0045CB18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AA0CF4011BBEE08D0045CB18 /* tipCalculator */;
+			target = AA0CF4011BBEE08D0045CB18 /* gratuitary */;
 			targetProxy = AA0CF41C1BBEE08D0045CB18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -357,7 +357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = gratuitary;
 			};
 			name = Debug;
 		};
@@ -367,7 +367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = gratuitary;
 			};
 			name = Release;
 		};
@@ -385,7 +385,7 @@
 				);
 				INFOPLIST_FILE = tipCalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = gratuitaryTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tipCalculator.app/tipCalculator";
 			};
 			name = Debug;
@@ -400,7 +400,7 @@
 				);
 				INFOPLIST_FILE = tipCalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = gratuitaryTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tipCalculator.app/tipCalculator";
 			};
 			name = Release;
@@ -408,7 +408,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA0CF3FD1BBEE08D0045CB18 /* Build configuration list for PBXProject "tipCalculator" */ = {
+		AA0CF3FD1BBEE08D0045CB18 /* Build configuration list for PBXProject "gratuitary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA0CF4231BBEE08D0045CB18 /* Debug */,
@@ -417,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA0CF4251BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "tipCalculator" */ = {
+		AA0CF4251BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "gratuitary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA0CF4261BBEE08D0045CB18 /* Debug */,
@@ -426,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA0CF4281BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "tipCalculatorTests" */ = {
+		AA0CF4281BBEE08D0045CB18 /* Build configuration list for PBXNativeTarget "gratuitaryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA0CF4291BBEE08D0045CB18 /* Debug */,
