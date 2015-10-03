@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *poorTipValue;
 @property (weak, nonatomic) IBOutlet UISlider *poorTipControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *roundControl;
+@property (weak, nonatomic) IBOutlet UILabel *roundingInfo;
 
 @end
 
@@ -98,6 +99,11 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //NSLog([NSString stringWithFormat:@"%li", sender.selectedSegmentIndex]);
     [defaults setInteger:sender.selectedSegmentIndex forKey:@"roundUp"];
+    
+    NSArray *roundingInfos = @[@"",
+                               @"The tip will round up to the nearest dollar amount, so you don't have to give the server change.",
+                               @"The tip will round up so the total is an even dollar amount.  You won't need to carry change around."];
+    self.roundingInfo.text = roundingInfos[sender.selectedSegmentIndex];
 }
 
 

@@ -175,9 +175,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gyr-tn-Cow">
-                                <rect key="frame" x="16" y="394" width="288" height="29"/>
+                                <rect key="frame" x="16" y="310" width="288" height="29"/>
                                 <segments>
-                                    <segment title="Exact"/>
+                                    <segment title="None"/>
                                     <segment title="Tip"/>
                                     <segment title="Total"/>
                                 </segments>
@@ -185,6 +185,12 @@
                                     <action selector="onRoundValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="5wf-Ib-52G"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WH-m5-nnm">
+                                <rect key="frame" x="16" y="346" width="288" height="72"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -197,6 +203,7 @@
                         <outlet property="poorTipControl" destination="FFW-hW-vIO" id="HDF-Bu-BPr"/>
                         <outlet property="poorTipValue" destination="YDP-BS-MAJ" id="xwD-Nq-ZWr"/>
                         <outlet property="roundControl" destination="gyr-tn-Cow" id="mBD-ls-Ome"/>
+                        <outlet property="roundingInfo" destination="8WH-m5-nnm" id="4Ho-dA-1gt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bx0-mc-Ay3" userLabel="First Responder" sceneMemberID="firstResponder"/>
