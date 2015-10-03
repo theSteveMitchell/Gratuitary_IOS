@@ -1,6 +1,6 @@
-# Pre-work - tipCalculator
+# Pre-work - gratuitary
 
-tipCalculator is a tip calculator application for iOS.
+gratuitary is a tip calculator application for iOS.
 
 Submitted by: Steve Mitchell
 

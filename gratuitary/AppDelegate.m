@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  tipCalculator
+//  gratuitary
 //
 //  Created by Steve Mitchell on 10/2/15.
 //  Copyright (c) 2015 Steve Mitchell. All rights reserved.

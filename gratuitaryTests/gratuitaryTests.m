@@ -1,6 +1,6 @@
 //
-//  tipCalculatorTests.m
-//  tipCalculatorTests
+//  gratuitaryTests.m
+//  gratuitaryTests
 //
 //  Created by Steve Mitchell on 10/2/15.
 //  Copyright (c) 2015 Steve Mitchell. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface tipCalculatorTests : XCTestCase
+@interface gratuitaryTests : XCTestCase
 
 @end
 
-@implementation tipCalculatorTests
+@implementation gratuitaryTests
 
 - (void)setUp {
     [super setUp];
