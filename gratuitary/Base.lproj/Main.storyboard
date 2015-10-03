@@ -168,19 +168,23 @@
                                     <action selector="onGreatTipValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="b8L-C5-2uJ"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-3i-l6h">
-                                <rect key="frame" x="16" y="281" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rounding" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-3i-l6h">
+                                <rect key="frame" x="16" y="281" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxR-Ar-laB">
-                                <rect key="frame" x="255" y="276" width="51" height="31"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gyr-tn-Cow">
+                                <rect key="frame" x="16" y="394" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Exact"/>
+                                    <segment title="Tip"/>
+                                    <segment title="Total"/>
+                                </segments>
                                 <connections>
-                                    <action selector="onRoundChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kes-7P-E2P"/>
-                                    <action selector="onRoundValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="dYK-6f-muF"/>
+                                    <action selector="onRoundValueChanged:" destination="xm0-4f-qb1" eventType="valueChanged" id="5wf-Ib-52G"/>
                                 </connections>
-                            </switch>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -192,7 +196,7 @@
                         <outlet property="greatTipValue" destination="kHy-70-Uqo" id="P35-CU-5gz"/>
                         <outlet property="poorTipControl" destination="FFW-hW-vIO" id="HDF-Bu-BPr"/>
                         <outlet property="poorTipValue" destination="YDP-BS-MAJ" id="xwD-Nq-ZWr"/>
-                        <outlet property="roundControl" destination="HxR-Ar-laB" id="bVI-nu-3X4"/>
+                        <outlet property="roundControl" destination="gyr-tn-Cow" id="mBD-ls-Ome"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bx0-mc-Ay3" userLabel="First Responder" sceneMemberID="firstResponder"/>

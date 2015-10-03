@@ -51,15 +51,23 @@
     long greatTipValue = [defaults integerForKey:@"greatTipValue"];
     long averageTipValue = [defaults integerForKey:@"averageTipValue"];
     long poorTipValue = [defaults integerForKey:@"poorTipValue"];
-    BOOL roundUp = [defaults boolForKey:@"roundUp"];
+    long roundUp = [defaults integerForKey:@"roundUp"] ? roundUp = [defaults integerForKey:@"roundUp"] : 0;
     
     NSArray *tipPercentages = @[@(greatTipValue), @(averageTipValue), @(poorTipValue)];
     
     float tipAmount = billAmount * ([tipPercentages[self.tipControl.selectedSegmentIndex] floatValue]/100);
-    if (roundUp) {
+    //round the tip amount to the nearest dollar
+    if (roundUp == 1) {
         //to correct for float precision errors, numbers within 1 penny of the floor with round down.
         tipAmount = floor(tipAmount + 0.994);
     }
+    //increase the tip amount to bring the total to the nearest dollar.
+    else if(roundUp == 2){
+        float distance = 1.00 - fmodf((billAmount + tipAmount), 1.0);
+        // distance is a positive number between 0 and 1.00;
+        tipAmount = tipAmount + fmodf(distance, 1.00);
+    }
+
     float totalAmount = billAmount + tipAmount;
     
     //updat the label

@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *averageTipControl;
 @property (weak, nonatomic) IBOutlet UILabel *poorTipValue;
 @property (weak, nonatomic) IBOutlet UISlider *poorTipControl;
-@property (weak, nonatomic) IBOutlet UISwitch *roundControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *roundControl;
 
 @end
 
@@ -62,8 +62,8 @@
     [self.poorTipControl setValue:poorTipValue animated:(NO)];
     self.poorTipValue.text = [NSString stringWithFormat:@"%li%@", poorTipValue, @"%"];
     
-    BOOL roundUp = [defaults boolForKey:@"roundUp"];
-    [self.roundControl setOn:roundUp animated:NO];
+    long roundUp = [defaults integerForKey:@"roundUp"];
+    [self.roundControl setSelectedSegmentIndex:roundUp];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,9 +94,10 @@
     [defaults setInteger:poorTipValue forKey:@"poorTipValue"];
 }
 
-- (IBAction)onRoundValueChanged:(UISwitch *)sender {
+- (IBAction)onRoundValueChanged:(UISegmentedControl *)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:(self.roundControl.on) forKey:@"roundUp"];
+    //NSLog([NSString stringWithFormat:@"%li", sender.selectedSegmentIndex]);
+    [defaults setInteger:sender.selectedSegmentIndex forKey:@"roundUp"];
 }
 
 
