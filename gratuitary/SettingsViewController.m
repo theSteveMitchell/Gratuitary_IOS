@@ -64,7 +64,7 @@
     self.poorTipValue.text = [NSString stringWithFormat:@"%li%@", poorTipValue, @"%"];
     
     long roundUp = [defaults integerForKey:@"roundUp"];
-    [self.roundControl setSelectedSegmentIndex:roundUp];
+    [self setRoundValue:roundUp];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,16 +96,20 @@
 }
 
 - (IBAction)onRoundValueChanged:(UISegmentedControl *)sender {
+    [self setRoundValue:sender.selectedSegmentIndex];
+}
+
+- (void)setRoundValue:(long) roundValue {
+    [self.roundControl setSelectedSegmentIndex:roundValue];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //NSLog([NSString stringWithFormat:@"%li", sender.selectedSegmentIndex]);
-    [defaults setInteger:sender.selectedSegmentIndex forKey:@"roundUp"];
+    [defaults setInteger:roundValue forKey:@"roundUp"];
     
     NSArray *roundingInfos = @[@"",
                                @"The tip will round up to the nearest dollar amount, so you don't have to give the server change.",
                                @"The tip will round up so the total is an even dollar amount.  You won't need to carry change around."];
-    self.roundingInfo.text = roundingInfos[sender.selectedSegmentIndex];
+    self.roundingInfo.text = roundingInfos[roundValue];
 }
-
 
 /*
 #pragma mark - Navigation
